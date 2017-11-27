@@ -1,7 +1,9 @@
-Doctrine phinx bridge bundle
+Doctrine phinx bridge
 ============================
 
-Auto-generates Phinx migrations from Doctrine scheme differences.
+Auto-generates Phinx migrations from Doctrine scheme differences. 
+
+Forked from 'ekapusta/doctrine-phinx-bridge-bundle' and amended so does not require Symfony framework (i.e., just Doctrine2 standalone)
 
 
 Command arguments

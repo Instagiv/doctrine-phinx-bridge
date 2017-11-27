@@ -47,23 +47,8 @@ class DiffCommand extends BaseDiffCommand
     public function execute(InputInterface $input, OutputInterface $output)
     {
         // Configure entity manager
-        DoctrineCommandHelper::setApplicationEntityManager($this->getApplication(), $input->getOption('em'));
+        //DoctrineCommandHelper::setApplicationEntityManager($this->getApplication(), $input->getOption('em'));
         $configuration = $this->getMigrationConfiguration($input, $output);
-
-        // Configure migrations directory
-        $dir = $this->getContainer()->getParameter('doctrine_migrations.dir_name');
-        if (!file_exists($dir)) {
-            mkdir($dir, 0777, true);
-        }
-        $configuration->setMigrationsDirectory($dir);
-
-        // Configure namespace
-        if (!$configuration->getMigrationsNamespace()) {
-            $configuration->setMigrationsNamespace('Phinx\Migration');
-        }
-
-        // Configure migrations table
-        $configuration->setMigrationsTableName($this->getContainer()->getParameter('doctrine_migrations.table_name'));
 
         // Process
         $connection = $configuration->getConnection();
@@ -147,14 +132,6 @@ class DiffCommand extends BaseDiffCommand
         return implode(PHP_EOL, array_map(function ($query) {
             return sprintf('$this->execute(%s);', var_export($query, true));
         }, $sql));
-    }
-
-    /**
-     * @return ContainerInterface
-     */
-    private function getContainer()
-    {
-        return $this->getApplication()->getKernel()->getContainer();
     }
 
     private function resolveTableName($name)
