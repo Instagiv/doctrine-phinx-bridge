@@ -1,10 +1,10 @@
 {
-    "name": "ekapusta/doctrine-phinx-bridge-bundle",
+    "name": "instagiv/doctrine-phinx-bridge-bundle",
     "description": "Auto-generates Phinx migrations from Doctrine scheme differences.",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Ekapusta\\DoctrinePhinxBridgeBundle\\": ""
+            "Instagiv\\DoctrinePhinxBridge\\": "src"
         }
     },
     "authors": [

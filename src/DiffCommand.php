@@ -1,6 +1,6 @@
 <?php
 
-namespace Ekapusta\DoctrinePhinxBridgeBundle\Command;
+namespace Instagiv\DoctrinePhinxBridge;
 
 use Doctrine\Bundle\DoctrineBundle\Command\Proxy\DoctrineCommandHelper;
 use Doctrine\DBAL\Migrations\Configuration\Configuration;
@@ -36,7 +36,7 @@ class DiffCommand extends BaseDiffCommand
 
     protected function getDefaultTemplatePath()
     {
-        return dirname(__DIR__) . '/Resources/views/phinx.template.php.dist';
+        return dirname(__DIR__) . '/Resources/phinx.template.php.dist';
     }
 
     protected function loadTemplate(InputInterface $input)
