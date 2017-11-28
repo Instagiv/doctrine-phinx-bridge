@@ -8,7 +8,7 @@
         }
     },
     "bin": [
-      "bin/dphinxmig"
+      "bin/docphinxmig"
     ],
     "authors": [
         {
