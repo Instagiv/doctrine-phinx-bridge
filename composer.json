@@ -7,6 +7,9 @@
             "Instagiv\\DoctrinePhinxBridge\\": "src"
         }
     },
+    "bin": [
+      "bin/dphinxmig"
+    ],
     "authors": [
         {
             "name": "Alexander Ustimenko",
