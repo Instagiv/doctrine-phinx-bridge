@@ -6,11 +6,15 @@ class <class> extends AbstractMigration
 
     public function up()
     {
+        $this->execute('SET FOREIGN_KEY_CHECKS = 0;');
 <up>
+        $this->execute('SET FOREIGN_KEY_CHECKS = 1;');
     }
 
     public function down()
     {
+        $this->execute('SET FOREIGN_KEY_CHECKS = 0;');
 <down>
+        $this->execute('SET FOREIGN_KEY_CHECKS = 1;');
     }
 }
